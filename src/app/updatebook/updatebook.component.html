@@ -1,0 +1,50 @@
+<mat-card class="example-card">
+    <mat-card-content class="heading">Update leave</mat-card-content>
+
+  
+  <form class="example-form">
+    <mat-form-field class="example-full-width"appearance="outline">
+      <mat-label>Employee id</mat-label>
+      <input matInput [(ngModel)]="book.sid"name="sid" disabled placeholder="Enter Student id" >
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>From date</mat-label>
+        <input matInput [(ngModel)]="book.fromdate"name="fromdate" [matDatepicker]="picker">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+      
+      <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>To date</mat-label>
+        <input matInput [(ngModel)]="book.todate"name="todate"  [matDatepicker]="picker1">
+        <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+        <mat-datepicker #picker1></mat-datepicker>
+      </mat-form-field>
+      
+      
+      <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>Book Name</mat-label>
+        <input matInput [(ngModel)]="book.bname"name="bname"  placeholder="Book Name">
+      </mat-form-field>
+      <!-- <mat-form-field appearance="outline" class="example-full-width">
+        <mat-label>Select</mat-label>
+        <mat-select name="genre" [(ngModel)]="book.genre">
+          <mat-option value="Fantasy">Fantasy</mat-option>
+          <mat-option value="Sci-Fi">Sci-Fi</mat-option>
+          <mat-option value="Mystery">Mystery</mat-option>
+          <mat-option value="Romance">Romance</mat-option>
+          <mat-option value="Thriller">Thriller</mat-option>
+          <mat-option value="Westerns">Westerns</mat-option>
+          <mat-option value="Biography">Biography</mat-option>
+          <mat-option value="Drama">Drama</mat-option>
+          <mat-option value="Adventures">Adventures</mat-option>
+        </mat-select>
+      </mat-form-field> -->
+  </form>
+
+  <div class="buttons">
+    <button (click)="updatedata()" mat-raised-button color="primary">Update</button>&nbsp;
+    <button routerLink="/records" mat-raised-button color="accent">Back</button>
+  </div>
+</mat-card>

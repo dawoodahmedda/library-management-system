@@ -1,0 +1,26 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span class="toolbar-title">Details Of All Available Books</span>
+    <button routerLink="/" style="margin-left:auto" mat-raised-button color="warn">Add New Book</button>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<!-- Book Cards Grid -->
+<div class="book-grid-container">
+  <div *ngFor="let book of dataSource.data" class="book-card">
+    <!-- Use book.imageUrl to bind the image -->
+    <img *ngIf="book.imageUrl" [src]="book.imageUrl" alt="{{ book.name }}" class="book-image">
+    <div class="book-info">
+      <h3>{{ book.name }}</h3>
+      <p>Author: {{ book.author }}</p>
+      <p>ISBN: {{ book.isbn }}</p>
+      <p>Total Books: {{ book.total }}</p>
+    </div>
+    <div class="book-actions">
+      <button mat-raised-button color="warn" (click)="delete(book.id)">Delete Book</button>
+    </div>
+  </div>
+</div>
+
+<!-- Paginator -->
+<mat-paginator [length]="totalItems" [pageSize]="12" [pageSizeOptions]="[12]" showFirstLastButtons (page)="paginator.pageIndex"></mat-paginator>

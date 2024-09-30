@@ -1,0 +1,9 @@
+.sidebar {
+    display: flex;
+    flex-direction: column; /* Arrange items in a column */
+  }
+  
+  .sidebar a {
+    text-align: left; /* Align text to the left */
+  }
+  

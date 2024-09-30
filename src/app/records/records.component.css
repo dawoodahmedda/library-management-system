@@ -1,0 +1,41 @@
+/* Toolbar styling */
+.toolbar-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: left;
+  }
+  
+  /* Table container */
+  .table-container {
+    margin-top: 15px;
+    padding: 10px;
+  }
+  
+  /* Table header styling */
+  .table-header {
+    font-size: 18px;
+    font-weight: bold;
+    color: #3f51b5; /* Primary color */
+    text-align: left;
+    padding: 10px;
+  }
+  
+  /* Table cell styling */
+  .table-cell {
+    font-size: 16px;
+    text-align: left;
+    padding: 10px;
+    color: #424242; /* Text color */
+  }
+  
+  /* Table general styling */
+  table {
+    width: 100%;
+    border-spacing: 0;
+  }
+  
+  /* Action button icons */
+  button.mat-icon-button {
+    margin-right: 10px;
+  }
+  

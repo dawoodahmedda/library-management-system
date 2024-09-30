@@ -1,0 +1,52 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span class="toolbar-title">Issue Book</span>
+    <button routerLink="/records" style="margin-left:auto" mat-raised-button color="warn">Records</button>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-card class="example-card">
+  <mat-card-content>
+    <h2 class="form-title">Issue Book</h2>
+
+    <form class="example-form">
+      <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>Student ID</mat-label>
+        <input matInput name="sid" [(ngModel)]="book.sid">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>Student Name</mat-label>
+        <input matInput name="sname" [(ngModel)]="book.sname">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="example-full-width">
+        <mat-label>From Date</mat-label>
+        <input matInput name="fromdate" [(ngModel)]="book.fromdate" [matDatepicker]="picker">
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="example-full-width">
+        <mat-label>To Date</mat-label>
+        <input matInput name="todate" [(ngModel)]="book.todate" [matDatepicker]="picker1">
+        <mat-datepicker-toggle matIconSuffix [for]="picker1"></mat-datepicker-toggle>
+        <mat-datepicker #picker1></mat-datepicker>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>Book Name</mat-label>
+        <input matInput name="bname" [(ngModel)]="book.bname">
+      </mat-form-field>
+    </form>
+
+    <div class="btn-group">
+      <button mat-raised-button color="primary" (click)="apply()">
+        <mat-icon>add_shopping_cart</mat-icon> Issue
+      </button>
+      <button routerLink="/records" mat-raised-button color="accent">
+        <mat-icon>check_circle</mat-icon> View
+      </button>
+    </div>
+  </mat-card-content>
+</mat-card>

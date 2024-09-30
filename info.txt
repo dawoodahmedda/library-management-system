@@ -1,0 +1,4 @@
+-- for running a json server
+
+json-server --watch db.json  
+json-server --watch dbb.json --port 3001

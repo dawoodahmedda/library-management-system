@@ -1,0 +1,80 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Toolbar styles */
+mat-toolbar {
+    margin-bottom: 10px;
+}
+
+.toolbar-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Container for book grid */
+.book-grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); /* Decreased min size to 200px */
+    gap: 10px; /* Reduced the gap between the boxes */
+    padding: 10px;
+}
+
+/* Each book card */
+.book-card {
+    border: 1px solid #ccc;
+    border-radius: 8px; /* Slightly reduced border radius */
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Reduced box shadow size */
+    transition: transform 0.2s ease-in-out;
+    background-color: #fff;
+    padding: 10px; /* Reduced padding inside the box */
+}
+
+.book-card:hover {
+    transform: translateY(-3px); /* Reduced hover effect */
+}
+
+/* Image of the book */
+.book-image {
+    width: 100%;
+    height: 80px; /* Reduced image height */
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Book information */
+.book-info {
+    padding: 5px 0; /* Reduced padding */
+}
+
+.book-info h3 {
+    font-size: 1rem; /* Reduced font size */
+    margin: 5px 0;
+    color: #333;
+}
+
+.book-info p {
+    margin: 0;
+    font-size: 0.85rem; /* Reduced font size */
+    color: #666;
+}
+
+/* Styling the action buttons */
+.book-actions {
+    text-align: right;
+}
+
+button.mat-raised-button {
+    margin-top: 2px; /* Slightly reduced margin */
+}
+
+.mat-elevation-z8 {
+    margin-top: 1px; /* Reduced top margin */
+}
+
+/* Paginator styling */
+mat-paginator {
+    margin-top: 0px; /* Reduced top margin */
+}
