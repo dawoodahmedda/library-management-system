@@ -18,6 +18,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatGridListModule } from '@angular/material/grid-list';
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -26,8 +27,11 @@ import { RecordsComponent } from './records/records.component';
 import { UpdatebookComponent } from './updatebook/updatebook.component';
 import { AddbookComponent } from './addbook/addbook.component';
 import { BooklistComponent } from './booklist/booklist.component';
-import { ApiService } from './service/api.service'; // Import ApiService
-import { ApiiService } from './service/api.service'; // Import ApiiService
+import { ApiService } from './service/api.service';
+import { ApiiService } from './service/api.service';
+import { StatsComponent } from './stats/stats.component';
+import { OrgChartComponent } from './org-chart/org-chart.component';
+
 
 @NgModule({
   declarations: [
@@ -36,7 +40,10 @@ import { ApiiService } from './service/api.service'; // Import ApiiService
     RecordsComponent,
     UpdatebookComponent,
     AddbookComponent,
-    BooklistComponent
+    BooklistComponent,
+    StatsComponent,
+    OrgChartComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -60,9 +67,11 @@ import { ApiiService } from './service/api.service'; // Import ApiiService
     MatIconModule,
     MatListModule,
     MatSidenavModule,
-    MatGridListModule
+    MatGridListModule,
+  
+    
   ],
-  providers: [ApiService, ApiiService], // Add ApiService and ApiiService here
+  providers: [ApiService, ApiiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

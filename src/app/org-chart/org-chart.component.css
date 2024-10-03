@@ -1,0 +1,5 @@
+/* Ensure that the chart container takes full width and sets proper dimensions */
+#chartContainer {
+  width: 100%;
+  height: 500px;
+}

@@ -5,6 +5,8 @@ import { UpdatebookComponent } from './updatebook/updatebook.component';
 import { RecordsComponent } from './records/records.component';
 import { AddbookComponent } from './addbook/addbook.component';
 import { BooklistComponent } from './booklist/booklist.component';
+import { StatsComponent } from './stats/stats.component';
+import { OrgChartComponent } from './org-chart/org-chart.component';
 
 
 const routes: Routes = [
@@ -12,7 +14,11 @@ const routes: Routes = [
   { path: 'records', component: RecordsComponent },
   { path: 'updatebook/:id', component: UpdatebookComponent },
   {path: 'addbook', component: AddbookComponent},
-  {path: 'booklist', component: BooklistComponent}
+  {path: 'booklist', component: BooklistComponent},
+  {path: 'stats', component: StatsComponent},
+  {
+    path: 'orgchart', component: OrgChartComponent
+  }
 ];
 
 @NgModule({

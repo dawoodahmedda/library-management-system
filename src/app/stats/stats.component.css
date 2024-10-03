@@ -1,0 +1,83 @@
+.custom-toolbar {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.toolbar-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: white; /* Optional: change based on your theme */
+}
+
+
+
+
+.image-container {
+  text-align: center; /* Center align the image */
+  margin-bottom: 20px; /* Space between the image and the stats container */
+}
+
+.library-image {
+  max-width: 100%; /* Responsive width */
+  height: 50vh; /* Maintain aspect ratio */
+  border-radius: 8px; /* Optional: add rounded corners */
+}
+
+.library-button {
+  margin-left: auto;
+  font-size: 16px;
+}
+
+.stats-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.stat-box {
+  text-align: center;
+  padding: 20px;
+  border-radius: 12px;
+  width: 200px;
+  transition: transform 0.2s, box-shadow 0.2s; /* Add transition effects */
+  background-color: #f0f0f0; /* Default background for boxes */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
+
+/* Custom background colors for each stat box */
+.total-books {
+  background-color: #4caf50; /* Green */
+  color: white;
+}
+
+.total-issued-books {
+  background-color: #2196f3; /* Blue */
+  color: white;
+}
+
+.total-available-books {
+  background-color: #ff9800; /* Orange */
+  color: white;
+}
+
+.total-students {
+  background-color: #f44336; /* Red */
+  color: white;
+}
+
+.stat-box h2 {
+  font-size: 16px;
+font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.stat-box p {
+  font-size: 38px;
+  font-weight: 700;
+}
+
+/* Add hover effect to stat boxes */
+.stat-box:hover {
+  transform: scale(1.05); /* Slightly enlarge the box */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Shadow effect on hover */
+}

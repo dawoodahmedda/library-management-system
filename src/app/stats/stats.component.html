@@ -1,0 +1,31 @@
+<mat-toolbar color="primary" class="custom-toolbar">
+  <mat-toolbar-row>
+    <span class="toolbar-title">Stats</span>
+    <button routerLink="/" class="library-button" mat-raised-button color="warn">View Of Library</button>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<!-- Add the image at the top -->
+<!-- <div class="image-container">
+  <img src="https://www.skoolbeep.com/blog/wp-content/uploads/2020/12/WHAT-IS-THE-PURPOSE-OF-A-LIBRARY-MANAGEMENT-SYSTEM-min.png" alt="Library Management System" class="library-image">
+</div> -->
+
+<div class="stats-container">
+  <div class="stat-box total-books">
+    <h2>Total Books</h2>
+    <p>{{ totalBooks }}</p>
+  </div>
+  <div class="stat-box total-issued-books">
+    <h2>Total Issued Books</h2>
+    <p>{{ totalIssuedBooks }}</p>
+  </div>
+  <div class="stat-box total-available-books">
+    <h2>Total Available Books</h2>
+    <p>{{ totalAvailableBooks }}</p>
+  </div>
+  <div class="stat-box total-students">
+    <h2>Total Students</h2>
+    <p>{{ totalStudents }}</p>
+  </div>
+</div>
+<app-org-chart></app-org-chart>

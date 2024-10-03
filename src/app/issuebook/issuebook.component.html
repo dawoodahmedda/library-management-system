@@ -9,44 +9,51 @@
   <mat-card-content>
     <h2 class="form-title">Issue Book</h2>
 
-    <form class="example-form">
+    <form #issueForm="ngForm" class="example-form" (ngSubmit)="apply()">
       <mat-form-field class="example-full-width" appearance="outline">
         <mat-label>Student ID</mat-label>
-        <input matInput name="sid" [(ngModel)]="book.sid">
+        <input matInput name="sid" [(ngModel)]="book.sid" required>
+        <mat-error *ngIf="issueForm.submitted && !book.sid">Student ID is required.</mat-error>
       </mat-form-field>
 
       <mat-form-field class="example-full-width" appearance="outline">
         <mat-label>Student Name</mat-label>
-        <input matInput name="sname" [(ngModel)]="book.sname">
+        <input matInput name="sname" [(ngModel)]="book.sname" required>
+        <mat-error *ngIf="issueForm.submitted && !book.sname">Student Name is required.</mat-error>
       </mat-form-field>
 
       <mat-form-field appearance="outline" class="example-full-width">
         <mat-label>From Date</mat-label>
-        <input matInput name="fromdate" [(ngModel)]="book.fromdate" [matDatepicker]="picker">
+        <input matInput name="fromdate" [(ngModel)]="book.fromdate" [matDatepicker]="picker" required>
         <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
+        <mat-error *ngIf="issueForm.submitted && !book.fromdate">From Date is required.</mat-error>
       </mat-form-field>
 
       <mat-form-field appearance="outline" class="example-full-width">
         <mat-label>To Date</mat-label>
-        <input matInput name="todate" [(ngModel)]="book.todate" [matDatepicker]="picker1">
+        <input matInput name="todate" [(ngModel)]="book.todate" [matDatepicker]="picker1" required>
         <mat-datepicker-toggle matIconSuffix [for]="picker1"></mat-datepicker-toggle>
         <mat-datepicker #picker1></mat-datepicker>
+        <mat-error *ngIf="issueForm.submitted && !book.todate">To Date is required.</mat-error>
       </mat-form-field>
 
-      <mat-form-field class="example-full-width" appearance="outline">
+      <mat-form-field appearance="outline" class="example-full-width">
         <mat-label>Book Name</mat-label>
-        <input matInput name="bname" [(ngModel)]="book.bname">
+        <mat-select [(ngModel)]="book.bname" required>
+          <mat-option *ngFor="let bookItem of books" [value]="bookItem.name">{{ bookItem.name }}</mat-option>
+        </mat-select>
+        <mat-error *ngIf="issueForm.submitted && !book.bname">Book Name is required.</mat-error>
       </mat-form-field>
-    </form>
 
-    <div class="btn-group">
-      <button mat-raised-button color="primary" (click)="apply()">
-        <mat-icon>add_shopping_cart</mat-icon> Issue
-      </button>
-      <button routerLink="/records" mat-raised-button color="accent">
-        <mat-icon>check_circle</mat-icon> View
-      </button>
-    </div>
+      <div class="btn-group">
+        <button mat-raised-button color="primary" type="submit" [disabled]="issueForm.invalid">
+          <mat-icon>add_shopping_cart</mat-icon> Issue
+        </button>
+        <button routerLink="/records" mat-raised-button color="accent">
+          <mat-icon>check_circle</mat-icon> View
+        </button>
+      </div>
+    </form>
   </mat-card-content>
 </mat-card>

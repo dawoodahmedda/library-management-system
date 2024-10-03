@@ -4,5 +4,5 @@ export interface addbookmodel{
     author:string;
     total:string;
     imageUrl: string;
-
+    totalCopies: number;
 }

@@ -11,7 +11,7 @@ import { ApiService } from '../service/api.service';
 })
 export class RecordsComponent implements OnInit {
   
-  displayedColumns: string[] = ['Student-id', 'Student Name', 'Fromdate', 'Todate', 'Book Name', 'Genre', 'Action'];
+  displayedColumns: string[] = ['Student-id', 'Student Name', 'Fromdate', 'Todate', 'Book Name',  'Action'];
   dataSource = new MatTableDataSource<any>();
   totalItems: number = 0; // Total number of items
   @ViewChild(MatPaginator) paginator!: MatPaginator; // Reference to paginator
